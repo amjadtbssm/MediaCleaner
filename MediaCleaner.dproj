@@ -96,6 +96,9 @@
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Release>1</VerInfo_Release>
+        <VerInfo_Keys>CompanyName=AMjAD TABASSUM;FileDescription=MediaCleaner;FileVersion=1.0.1.0;InternalName=MediaCleaner;LegalCopyright=Copyright (c) AMjAD TABASSUM, All rights reserved;LegalTrademarks=Copyright (c) AMjAD TABASSUM, All rights reserved;OriginalFilename=MediaCleaner.exe;ProductName=MediaCleaner;ProductVersion=1.0.1.0;Comments=MediaCleaner</VerInfo_Keys>
+        <DCC_DcuOutput>.\$(Platform)\</DCC_DcuOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <Icon_MainIcon>MediaCleaner_Icon.ico</Icon_MainIcon>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
@@ -107,6 +110,18 @@
         </DelphiCompile>
         <DCCReference Include="MainForm.pas">
             <Form>Media_Cleaner</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="RenameFrm.pas">
+            <Form>RenameForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="AboutForm.pas">
+            <Form>FormAbout</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="MainSettings.pas">
+            <Form>FrmSettings</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
@@ -136,6 +151,12 @@
             </Delphi.Personality>
             <Deployment Version="2">
                 <DeployFile LocalName="Win32\Debug\MediaCleaner.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>MediaCleaner.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win32\Release\MediaCleaner.exe" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>MediaCleaner.exe</RemoteName>
                         <Overwrite>true</Overwrite>

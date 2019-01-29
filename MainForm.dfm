@@ -13,6 +13,12 @@ object Media_Cleaner: TMedia_Cleaner
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -943,6 +949,7 @@ object Media_Cleaner: TMedia_Cleaner
       400F5E681060AC12194CCE2E3DF8FF5DD364FCD67EC176A601ADDB6BECD2837F
       77058F0FBF01EA8C6FFF1F3898D6E525527F550000000049454E44AE426082}
     Transparent = True
+    OnDblClick = BtnAboutClick
   end
   object Label3: TLabel
     Left = 10
@@ -1646,6 +1653,7 @@ object Media_Cleaner: TMedia_Cleaner
       2999BEB29404A0644AA664FACAD2FF07362F47F5CACF7A9F0000000049454E44
       AE426082}
     Transparent = True
+    OnDblClick = BtnAboutClick
   end
   object Label1: TLabel
     Left = 460
@@ -1674,6 +1682,7 @@ object Media_Cleaner: TMedia_Cleaner
     Font.Name = 'Webdings'
     Font.Style = []
     ParentFont = False
+    OnClick = LblSoundClick
   end
   object BtnSelectFolder: TButton
     Left = 453
@@ -1685,6 +1694,8 @@ object Media_Cleaner: TMedia_Cleaner
     ParentShowHint = False
     ShowHint = True
     TabOrder = 0
+    OnClick = BtnSelectFolderClick
+    OnKeyUp = FormKeyUp
   end
   object BtnSettings: TButton
     Left = 580
@@ -1696,6 +1707,8 @@ object Media_Cleaner: TMedia_Cleaner
     ParentShowHint = False
     ShowHint = True
     TabOrder = 1
+    OnClick = BtnSettingsClick
+    OnKeyUp = FormKeyUp
   end
   object BtnAbout: TButton
     Left = 703
@@ -1706,7 +1719,9 @@ object Media_Cleaner: TMedia_Cleaner
     Caption = 'About'
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 2
+    TabOrder = 3
+    OnClick = BtnAboutClick
+    OnKeyUp = FormKeyUp
   end
   object BtnPlay: TButton
     Left = 69
@@ -1723,7 +1738,8 @@ object Media_Cleaner: TMedia_Cleaner
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 3
+    TabOrder = 8
+    OnClick = BtnPlayClick
   end
   object BtnPause: TButton
     Left = 125
@@ -1740,7 +1756,8 @@ object Media_Cleaner: TMedia_Cleaner
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 4
+    TabOrder = 9
+    OnClick = BtnPauseClick
   end
   object btnStop: TButton
     Left = 181
@@ -1757,7 +1774,8 @@ object Media_Cleaner: TMedia_Cleaner
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 5
+    TabOrder = 10
+    OnClick = btnStopClick
   end
   object BtnDelete: TButton
     Left = 439
@@ -1768,7 +1786,8 @@ object Media_Cleaner: TMedia_Cleaner
     Caption = 'Delete'
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 6
+    TabOrder = 13
+    OnClick = BtnDeleteClick
   end
   object BtnCopy: TButton
     Left = 520
@@ -1779,7 +1798,8 @@ object Media_Cleaner: TMedia_Cleaner
     Caption = 'Copy'
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 7
+    TabOrder = 14
+    OnClick = BtnCopyClick
   end
   object BtnMove: TButton
     Left = 601
@@ -1790,7 +1810,9 @@ object Media_Cleaner: TMedia_Cleaner
     Caption = 'Move'
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 8
+    TabOrder = 15
+    OnClick = BtnMoveClick
+    OnKeyUp = FormKeyUp
   end
   object BtnExit: TButton
     Left = 682
@@ -1801,14 +1823,15 @@ object Media_Cleaner: TMedia_Cleaner
     Caption = 'Exit'
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 9
+    TabOrder = 16
+    OnClick = BtnExitClick
+    OnKeyUp = FormKeyUp
   end
   object FileListBox1: TFileListBox
     Left = 8
     Top = 167
     Width = 471
     Height = 269
-    Hint = 'Media Files'
     BevelInner = bvNone
     BevelOuter = bvNone
     FileType = [ftReadOnly, ftHidden, ftSystem, ftVolumeID, ftArchive, ftNormal]
@@ -1818,12 +1841,14 @@ object Media_Cleaner: TMedia_Cleaner
     Font.Name = 'Tahoma'
     Font.Style = []
     ItemHeight = 21
-    Mask = '*.mp3;*.wav;*.ogg;'
+    Mask = '*.mp3;*.wav;*.mpg;*.mpeg;*.mp4;*.mkv;*.flv;*.wmv;*.avi;*.vob;'
     ParentFont = False
     ParentShowHint = False
     ShowGlyphs = True
-    ShowHint = True
-    TabOrder = 10
+    ShowHint = False
+    TabOrder = 5
+    OnDblClick = FileListBox1DblClick
+    OnKeyUp = FormKeyUp
   end
   object BtnHelp: TButton
     Left = 641
@@ -1834,18 +1859,9 @@ object Media_Cleaner: TMedia_Cleaner
     Caption = 'Help'
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 11
-  end
-  object ProgressBar1: TProgressBar
-    Left = 8
-    Top = 442
-    Width = 749
-    Height = 18
-    Hint = 'Play Progress'
-    ParentShowHint = False
-    Position = 50
-    ShowHint = True
-    TabOrder = 12
+    TabOrder = 2
+    OnClick = BtnHelpClick
+    OnKeyUp = FormKeyUp
   end
   object BtnPre: TButton
     Left = 11
@@ -1862,7 +1878,8 @@ object Media_Cleaner: TMedia_Cleaner
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 13
+    TabOrder = 7
+    OnClick = BtnPreClick
   end
   object BtnNext: TButton
     Left = 238
@@ -1879,7 +1896,8 @@ object Media_Cleaner: TMedia_Cleaner
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 14
+    TabOrder = 11
+    OnClick = BtnNextClick
   end
   object BtnRename: TButton
     Left = 357
@@ -1890,7 +1908,8 @@ object Media_Cleaner: TMedia_Cleaner
     Caption = 'Rename'
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 15
+    TabOrder = 12
+    OnClick = BtnRenameClick
   end
   object EdtSearch: TEdit
     Left = 520
@@ -1903,39 +1922,87 @@ object Media_Cleaner: TMedia_Cleaner
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 16
+    TabOrder = 4
+    OnChange = EdtSearchChange
+    OnKeyUp = FormKeyUp
   end
   object VolTrackBar: TTrackBar
     Left = 624
     Top = 468
     Width = 133
     Height = 30
+    ParentCustomHint = False
     DoubleBuffered = False
-    Max = 100
+    Max = 10000
     ParentDoubleBuffered = False
+    Frequency = 1000
     Position = 30
-    PositionToolTip = ptTop
     SelEnd = 100
     SelStart = 1
-    TabOrder = 17
+    TabOrder = 6
     ThumbLength = 25
     TickStyle = tsNone
+    OnChange = VolTrackBarChange
+    OnKeyUp = FormKeyUp
   end
   object MediaPanel: TPanel
-    Left = 480
+    Left = 487
     Top = 167
-    Width = 287
+    Width = 275
     Height = 269
-    BevelOuter = bvNone
+    BevelInner = bvLowered
+    BevelOuter = bvLowered
+    TabOrder = 17
+    object VideoWindow: TVideoWindow
+      Left = 2
+      Top = 2
+      Width = 271
+      Height = 265
+      FilterGraph = FilterGraph
+      VMROptions.Mode = vmrWindowed
+      Color = clBlack
+      ShowHint = True
+      Align = alClient
+      TabStop = False
+    end
+  end
+  object SeekBar: TDSTrackBar
+    Left = 5
+    Top = 441
+    Width = 764
+    Height = 26
+    ParentShowHint = False
+    ShowHint = False
     TabOrder = 18
+    TickStyle = tsNone
+    OnKeyUp = FormKeyUp
+    FilterGraph = FilterGraph
   end
   object Timer1: TTimer
     Interval = 1
+    OnTimer = Timer1Timer
     Left = 24
     Top = 183
   end
   object SelectFolderDialog: TRzSelectFolderDialog
     Left = 56
     Top = 184
+  end
+  object FilterGraph: TFilterGraph
+    GraphEdit = False
+    LinearVolume = True
+    Left = 714
+    Top = 383
+  end
+  object VidPlayer: TAVPlayer
+    FilterGraph = FilterGraph
+    DisableAudio = False
+    DisableVideo = False
+    ShowMode = smNv12
+    StartTime = 0
+    EndTime = 0
+    DisableSubtitle = False
+    Left = 658
+    Top = 383
   end
 end
