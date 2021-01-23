@@ -4,12 +4,12 @@ object Media_Cleaner: TMedia_Cleaner
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Media Cleaner'
-  ClientHeight = 549
-  ClientWidth = 777
+  ClientHeight = 686
+  ClientWidth = 971
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -14
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
@@ -20,12 +20,16 @@ object Media_Cleaner: TMedia_Cleaner
   OnKeyUp = FormKeyUp
   OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 17
   object Image1: TImage
-    Left = 8
-    Top = 8
-    Width = 154
-    Height = 139
+    Left = 10
+    Top = 10
+    Width = 193
+    Height = 174
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D494844520000009A0000
       008B0806000001EE72B0BF000000097048597300002E2300002E230178A53F76
@@ -952,77 +956,105 @@ object Media_Cleaner: TMedia_Cleaner
     OnDblClick = BtnAboutClick
   end
   object Label3: TLabel
-    Left = 10
-    Top = 473
-    Width = 70
-    Height = 13
+    Left = 13
+    Top = 591
+    Width = 90
+    Height = 17
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Now Playing:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -14
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object LblPlaying: TLabel
-    Left = 87
-    Top = 473
-    Width = 495
-    Height = 13
+    Left = 109
+    Top = 591
+    Width = 619
+    Height = 17
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     AutoSize = False
   end
   object Label5: TLabel
-    Left = 12
-    Top = 149
-    Width = 90
-    Height = 13
+    Left = 15
+    Top = 186
+    Width = 110
+    Height = 17
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Selected Folder:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -14
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object PathLabel: TLabel
-    Left = 108
-    Top = 149
-    Width = 649
-    Height = 13
+    Left = 135
+    Top = 186
+    Width = 811
+    Height = 17
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     AutoSize = False
   end
   object LblStatus: TLabel
-    Left = 181
-    Top = 72
-    Width = 210
-    Height = 19
+    Left = 226
+    Top = 90
+    Width = 263
+    Height = 24
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     AutoSize = False
     Caption = ' '
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -16
+    Font.Height = -20
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object LblFile: TLabel
-    Left = 181
-    Top = 103
-    Width = 576
-    Height = 19
+    Left = 226
+    Top = 129
+    Width = 720
+    Height = 24
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     AutoSize = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -16
+    Font.Height = -20
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object Image2: TImage
-    Left = 162
-    Top = 14
-    Width = 288
-    Height = 52
+    Left = 203
+    Top = 18
+    Width = 360
+    Height = 65
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D49484452000001200000
       003408060000015DB4D52F000000097048597300002E2300002E230178A53F76
@@ -1656,40 +1688,52 @@ object Media_Cleaner: TMedia_Cleaner
     OnDblClick = BtnAboutClick
   end
   object Label1: TLabel
-    Left = 460
-    Top = 67
-    Width = 61
-    Height = 19
+    Left = 575
+    Top = 84
+    Width = 76
+    Height = 24
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     AutoSize = False
     Caption = ' Search:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -16
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object LblSound: TLabel
-    Left = 605
-    Top = 468
-    Width = 29
-    Height = 24
+    Left = 756
+    Top = 585
+    Width = 37
+    Height = 30
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     AutoSize = False
     Caption = 'X'#240
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -24
     Font.Name = 'Webdings'
     Font.Style = []
     ParentFont = False
     OnClick = LblSoundClick
   end
   object BtnSelectFolder: TButton
-    Left = 453
-    Top = 14
-    Width = 121
-    Height = 40
+    Left = 566
+    Top = 18
+    Width = 152
+    Height = 50
     Hint = 'Select a folder to Clean'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Select Folder to Clean'
     ParentShowHint = False
     ShowHint = True
@@ -1698,11 +1742,15 @@ object Media_Cleaner: TMedia_Cleaner
     OnKeyUp = FormKeyUp
   end
   object BtnSettings: TButton
-    Left = 580
-    Top = 14
-    Width = 53
-    Height = 40
+    Left = 725
+    Top = 18
+    Width = 66
+    Height = 50
     Hint = 'Select your Copy and Move to Folder'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Settings'
     ParentShowHint = False
     ShowHint = True
@@ -1711,11 +1759,15 @@ object Media_Cleaner: TMedia_Cleaner
     OnKeyUp = FormKeyUp
   end
   object BtnAbout: TButton
-    Left = 703
-    Top = 14
-    Width = 56
-    Height = 40
+    Left = 879
+    Top = 18
+    Width = 70
+    Height = 50
     Hint = 'About Media Cleaner'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'About'
     ParentShowHint = False
     ShowHint = True
@@ -1724,15 +1776,19 @@ object Media_Cleaner: TMedia_Cleaner
     OnKeyUp = FormKeyUp
   end
   object BtnPlay: TButton
-    Left = 69
-    Top = 501
-    Width = 50
-    Height = 35
+    Left = 86
+    Top = 626
+    Width = 63
+    Height = 44
     Hint = 'Play'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = '4'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -24
     Font.Name = 'Webdings'
     Font.Style = []
     ParentFont = False
@@ -1742,15 +1798,19 @@ object Media_Cleaner: TMedia_Cleaner
     OnClick = BtnPlayClick
   end
   object BtnPause: TButton
-    Left = 125
-    Top = 501
-    Width = 50
-    Height = 35
+    Left = 156
+    Top = 626
+    Width = 63
+    Height = 44
     Hint = 'Pause'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = ';'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -24
     Font.Name = 'Webdings'
     Font.Style = []
     ParentFont = False
@@ -1760,15 +1820,19 @@ object Media_Cleaner: TMedia_Cleaner
     OnClick = BtnPauseClick
   end
   object btnStop: TButton
-    Left = 181
-    Top = 501
-    Width = 50
-    Height = 35
+    Left = 226
+    Top = 626
+    Width = 63
+    Height = 44
     Hint = 'Stop'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = '<'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -24
     Font.Name = 'Webdings'
     Font.Style = []
     ParentFont = False
@@ -1778,11 +1842,15 @@ object Media_Cleaner: TMedia_Cleaner
     OnClick = btnStopClick
   end
   object BtnDelete: TButton
-    Left = 439
-    Top = 502
-    Width = 75
-    Height = 35
+    Left = 549
+    Top = 628
+    Width = 94
+    Height = 43
     Hint = 'Delete File to Recycle Bin'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Delete'
     ParentShowHint = False
     ShowHint = True
@@ -1790,11 +1858,15 @@ object Media_Cleaner: TMedia_Cleaner
     OnClick = BtnDeleteClick
   end
   object BtnCopy: TButton
-    Left = 520
-    Top = 502
-    Width = 75
-    Height = 35
+    Left = 650
+    Top = 628
+    Width = 94
+    Height = 43
     Hint = 'Copy File'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Copy'
     ParentShowHint = False
     ShowHint = True
@@ -1802,11 +1874,15 @@ object Media_Cleaner: TMedia_Cleaner
     OnClick = BtnCopyClick
   end
   object BtnMove: TButton
-    Left = 601
-    Top = 502
-    Width = 75
-    Height = 35
+    Left = 751
+    Top = 628
+    Width = 94
+    Height = 43
     Hint = 'Move File'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Move'
     ParentShowHint = False
     ShowHint = True
@@ -1815,11 +1891,15 @@ object Media_Cleaner: TMedia_Cleaner
     OnKeyUp = FormKeyUp
   end
   object BtnExit: TButton
-    Left = 682
-    Top = 502
-    Width = 75
-    Height = 35
+    Left = 853
+    Top = 628
+    Width = 93
+    Height = 43
     Hint = 'Exit Media Cleaner'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Exit'
     ParentShowHint = False
     ShowHint = True
@@ -1828,19 +1908,23 @@ object Media_Cleaner: TMedia_Cleaner
     OnKeyUp = FormKeyUp
   end
   object FileListBox1: TFileListBox
-    Left = 8
-    Top = 167
-    Width = 471
-    Height = 269
+    Left = 10
+    Top = 209
+    Width = 589
+    Height = 336
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BevelInner = bvNone
     BevelOuter = bvNone
     FileType = [ftReadOnly, ftHidden, ftSystem, ftVolumeID, ftArchive, ftNormal]
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -17
+    Font.Height = -21
     Font.Name = 'Tahoma'
     Font.Style = []
-    ItemHeight = 21
+    ItemHeight = 25
     Mask = '*.mp3;*.wav;*.mpg;*.mpeg;*.mp4;*.mkv;*.flv;*.wmv;*.avi;*.vob;'
     ParentFont = False
     ParentShowHint = False
@@ -1851,11 +1935,15 @@ object Media_Cleaner: TMedia_Cleaner
     OnKeyUp = FormKeyUp
   end
   object BtnHelp: TButton
-    Left = 641
-    Top = 14
-    Width = 55
-    Height = 40
+    Left = 801
+    Top = 18
+    Width = 69
+    Height = 50
     Hint = 'Media Cleaner Help'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Help'
     ParentShowHint = False
     ShowHint = True
@@ -1864,15 +1952,19 @@ object Media_Cleaner: TMedia_Cleaner
     OnKeyUp = FormKeyUp
   end
   object BtnPre: TButton
-    Left = 11
-    Top = 501
-    Width = 50
-    Height = 35
+    Left = 14
+    Top = 626
+    Width = 62
+    Height = 44
     Hint = 'Previous'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = '9'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -24
     Font.Name = 'Webdings'
     Font.Style = []
     ParentFont = False
@@ -1882,15 +1974,19 @@ object Media_Cleaner: TMedia_Cleaner
     OnClick = BtnPreClick
   end
   object BtnNext: TButton
-    Left = 238
-    Top = 501
-    Width = 50
-    Height = 35
+    Left = 298
+    Top = 626
+    Width = 62
+    Height = 44
     Hint = 'Next'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = ':'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -24
     Font.Name = 'Webdings'
     Font.Style = []
     ParentFont = False
@@ -1900,11 +1996,15 @@ object Media_Cleaner: TMedia_Cleaner
     OnClick = BtnNextClick
   end
   object BtnRename: TButton
-    Left = 357
-    Top = 502
-    Width = 75
-    Height = 35
+    Left = 446
+    Top = 628
+    Width = 94
+    Height = 43
     Hint = 'Rename Selected File'
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Caption = 'Rename'
     ParentShowHint = False
     ShowHint = True
@@ -1912,13 +2012,17 @@ object Media_Cleaner: TMedia_Cleaner
     OnClick = BtnRenameClick
   end
   object EdtSearch: TEdit
-    Left = 520
-    Top = 62
-    Width = 237
-    Height = 27
+    Left = 650
+    Top = 78
+    Width = 296
+    Height = 32
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -16
+    Font.Height = -20
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
@@ -1927,10 +2031,14 @@ object Media_Cleaner: TMedia_Cleaner
     OnKeyUp = FormKeyUp
   end
   object VolTrackBar: TTrackBar
-    Left = 624
-    Top = 468
-    Width = 133
-    Height = 30
+    Left = 780
+    Top = 585
+    Width = 166
+    Height = 38
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     ParentCustomHint = False
     DoubleBuffered = False
     Max = 10000
@@ -1940,24 +2048,32 @@ object Media_Cleaner: TMedia_Cleaner
     SelEnd = 100
     SelStart = 1
     TabOrder = 6
-    ThumbLength = 25
+    ThumbLength = 31
     TickStyle = tsNone
     OnChange = VolTrackBarChange
     OnKeyUp = FormKeyUp
   end
   object MediaPanel: TPanel
-    Left = 487
-    Top = 167
-    Width = 275
-    Height = 269
+    Left = 609
+    Top = 209
+    Width = 344
+    Height = 336
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     BevelInner = bvLowered
     BevelOuter = bvLowered
     TabOrder = 17
     object VideoWindow: TVideoWindow
       Left = 2
       Top = 2
-      Width = 271
-      Height = 265
+      Width = 340
+      Height = 332
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       FilterGraph = FilterGraph
       VMROptions.Mode = vmrWindowed
       Color = clBlack
@@ -1967,13 +2083,18 @@ object Media_Cleaner: TMedia_Cleaner
     end
   end
   object SeekBar: TDSTrackBar
-    Left = 5
-    Top = 441
-    Width = 764
-    Height = 26
+    Left = 6
+    Top = 551
+    Width = 955
+    Height = 33
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     ParentShowHint = False
     ShowHint = False
     TabOrder = 18
+    ThumbLength = 25
     TickStyle = tsNone
     OnKeyUp = FormKeyUp
     FilterGraph = FilterGraph
