@@ -6,3 +6,9 @@ Remove unwanted media files, clean your media collection with ease and gain more
 MediaCleaner supports all major media files which are common now a days like MP4, MP3, Wav(Wave), MPG(MPEG), MKV, FLV, WMV, AVI and DVD VOB files.
 
 This project uses Raize Components of Raize Software and FFMPEG VCL Components of FlashAV Software you will need these components to compile MediaCleaner in Delphi 10 Seattle.
+
+## MediaCleaner
+![](https://github.com/amjadtbssm/MediaCleaner/raw/master/Win32/Release/Help/assets/main_window.png)
+
+## Settings Dialog Box
+![](https://github.com/amjadtbssm/MediaCleaner/raw/master/Win32/Release/Help/assets/settings_window.png)
